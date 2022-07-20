@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+var prices=[7,1,5,3,6,4];
+// prices = [7,6,4,3,1]
+var max = 0;
+var diff = 0;
+var k, l;
+for (var i = 0; i < prices.length - 1; i++) {
+for (j = i + 1; j < prices.length; j++) {
+diff = prices[j] - prices[i];
+if (diff > max) {
+max = diff;
+k = i;
+l = j;
+}
+}
+}
+if (max == 0) {
+console.log('There is no transaction and max profit is ' + max);
+}
+else {
+console.log('maximum profit ' + max + ' for buying on day ' + (k + 1) + ' at price ' + prices[k] + ' and selling on day ' + (l + 1) + ' at price ' + prices[l]);
+}
+</script>
+</body>
+</html>
